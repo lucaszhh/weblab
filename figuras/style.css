@@ -1,0 +1,87 @@
+body {
+    background-color: violet;
+}
+
+div {
+    display: inline-block;
+}
+
+.cuadrado {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transition: all 1s;
+}
+
+.cuadrado:hover {
+    transform: rotate(120deg) scale(2);
+    background-color: black;
+}
+
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all 2s;
+}
+
+.circulo:hover {
+    transform: translateY(50px);
+}
+
+
+.triangulo {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+}
+
+.estrella {
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(50% 2.45%, 61.8% 38.77%, 100% 38.77%, 69.1% 61.23%, 80.9% 97.55%, 50% 75.1%, 19.1% 97.55%, 30.9% 61.23%, 0% 38.77%, 38.2% 38.77%);
+    background-color: purple;
+}
+
+
+
+@keyframes fantasma {
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}
+
+img{
+    position: relative;
+    top: 100px;
+    animation: fantasma 2s infinite 3s;
+}
+
+
+@keyframes fantasma {
+    0%,100% {
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+        transform: translateY(-40px);
+    }
+}
+
+
+
+
+
+
+
+

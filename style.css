@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+:root {
+    --bg: #FAFAFA;
+    --rosa: #EE3D8F;
+    --celeste: #37BBED;
+    --verde-lima: #D7DF23;
+    --verde: #50B8B1;
+    --morado: #9283BE;
+    --naranja: #F7941E;
+    --amarillo: #FFD100;
+    --font: #0E0E0E;
+}
+
+body {
+    align-content: center;
+    background-size: 90px 70px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.banner {
+    height: 100vh;
+    align-content: center;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.icons img {
+    width: 100px;
+    transition: all 300ms;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+}
+
+.icons img.casa {
+    width: 150px;
+}
+
+.icons img.esc {
+    width: 200px;
+}
+
+
+
+
+
+.web {
+    color: var(--celeste);
+
+}
+
+.lab {
+    color: var(--rosa);
+}
+
+span.borderText {
+    -webkit-text-stroke: 0.5px black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 900;
+    transition: all 1s;
+}
+
+
+/*img:hover {
+    background-image: url(./imagenes/sayan.gif);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* seccion que hacemos*/
+.queHacemos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 0.5px black solid;
+    backdrop-filter: blur(20px);
+    transition: all 500ms;
+}
+
+.queHacemos div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 55%;
+}
+
+.queHacemos img {
+    width: 35%;
+}
+
+/* seccion quienes somos */
+.quienesSomos {
+    margin-top: 80px;
+}
+
+.quienesSomos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quienesSomos div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.cardAvatar {
+    border: solid 1px black;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: center;
+
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 500ms;
+    
+}
+
+.cardAvatar:hover,
+.queHacemos:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+.cardAvatar.disable{
+    filter: sepia(80%);
+    transform: none;
+    box-shadow: none;
+}
+
+.cardAvatar.disable:hover p{
+    font-size: unset;
+    transform: none;
+    animation: none;
+
+    -webkit-text-stroke: 0px;
+    box-shadow: none;
+}
+
+
+.cardAvatar.disable > p{
+    animation: none;
+}
+
+
+
+.cardAvatar:hover img {
+    transform: scale(2) translateY(4px);
+}
+
+.cardAvatar.disable:hover img {
+    transform: scale(2) !important;
+}
+
+.cardAvatar:hover p {
+    font-size: 30px;
+
+
+    -webkit-text-stroke: 0.5px black;
+    transform: translateY(-20px);
+    animation: cambio-color 1s infinite;
+}
+
+.cardAvatar img {
+    width: 100%;
+    transform: scale(2) translateY(-10px);
+    transition: all 500ms;
+}
+
+.cardAvatar p {
+    transition: all 500ms;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+@keyframes cambio-color {
+    0% {
+        color: var(--rosa);
+    }
+
+    16.67% {
+        color: var(--celeste);
+    }
+
+    33.33% {
+        color: var(--verde-lima);
+    }
+
+    50% {
+        color: var(--verde);
+    }
+
+    66.67% {
+        color: var(--morado);
+    }
+
+    83.33% {
+        color: var(--naranja);
+    }
+
+    100% {
+        color: var(--amarillo);
+    }
+}
+
+.imagenLenguajes {
+    display: flex;
+    justify-content: center;
+}
+
+.imagenLenguajes img {
+    width: 350px;
+}
+
+/* seccion de proyectos */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards>h2 {
+    padding: 30px;
+}
+
+.cardProyecto {
+    font-family: monospace;
+    max-width: 300px;
+    height: 230px;
+    background-color: var(--bg);
+    color: var(--font);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.cardProyecto header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cardProyecto header>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.circulo {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.celeste {
+    background-color: var(--celeste);
+}
+
+.rosa {
+    background-color: var(--rosa);
+}
+
+.morado {
+    background-color: var(--morado);
+}
+
+.cardProyecto section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cardProyecto section div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.cardProyecto-titulo {
+    color: var(--verde);
+}
+
+.cursor {
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* BACKGROUND */
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -999;
+    filter: blur(2px);
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.out-top {
+    animation: rotate 20s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.in-top {
+    animation: rotate 10s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.out-bottom {
+    animation: rotate 25s linear infinite;
+    transform-origin: 84px 93px;
+}
+
+.in-bottom {
+    animation: rotate 15s linear infinite;
+    transform-origin: 84px 93px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+footer .images {
+    padding: 50px 0;
+}
+
+footer img {
+    transform: scale(1.5);
+    width: 100px;
+}
+
+footer a {
+    color: var(--rosa);
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+

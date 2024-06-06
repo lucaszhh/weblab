@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAWL STARS</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        header{
+            background-image: url(../imagenes/bgBrawl.jpg);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        img {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mis Brawlers Favoritos</h1>
+        <h2>Preciona para escucharlos   </h2>
+        <div>
+            <img src="../imagenes/ElPrimo.webp" alt="" onclick="playAudio('../audios/elPrimo.ogg')">
+            <img src="../imagenes/Griff.webp" alt="" onclick="playAudio('../audios/griffRie.ogg')">
+            <img src="../imagenes/shelly.webp" alt="" onclick="playAudio('../audios/shellyRie.ogg')">
+        </div>
+    </header>
+    <h1>Bonus Track</h1>
+    <img src="../imagenes/pedro.gif" alt="" onclick="playAudio('../audios/pedro.mp3')">
+</body>
+
+<script>
+    function playAudio(ubicacion_audio) {
+        const audio = new Audio(ubicacion_audio)
+        audio.play()
+    }
+</script>
+
+</html>
