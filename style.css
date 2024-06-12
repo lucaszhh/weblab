@@ -99,22 +99,22 @@ h1 {
 .queHacemos {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     border-radius: 10px;
     border: 0.5px black solid;
     backdrop-filter: blur(20px);
     transition: all 500ms;
+    gap: 40px;
 }
 
 .queHacemos div {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 55%;
+    width: 75%;
 }
 
 .queHacemos img {
-    width: 35%;
+    width: 20%;
 }
 
 /* seccion quienes somos */
@@ -246,7 +246,8 @@ h1 {
 }
 
 .imagenLenguajes img {
-    width: 350px;
+    width: 200px;
+    padding: 20px;
 }
 
 /* seccion de proyectos */
@@ -381,6 +382,7 @@ svg {
 
 footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -392,7 +394,7 @@ footer .images {
     padding: 50px 0;
 }
 
-footer img {
+footer .images img {
     transform: scale(1.5);
     width: 100px;
 }
@@ -404,5 +406,10 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+footer > img{
+    width: 200px;
+    padding: 40px;
 }
 
