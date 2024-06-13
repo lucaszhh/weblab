@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -83,20 +83,45 @@ h1 {
     font-size: 100px;
     font-weight: 900;
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        justify-content: flex-start;
+
+        &>span:nth-child(2) {
+            transform: translate(0, -30px);
+        }
+    }
+
+    .icons {
+        flex-direction: column;
+        gap: 0;
+
+        &>img:nth-child(2) {
+            order: -1;
+        }
+    }
 }
 
 
-/*img:hover {
-    background-image: url(./imagenes/sayan.gif);
-    background-size: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-}*/
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px 40px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 1200px;
+    }
 }
 
 /* seccion que hacemos*/
@@ -121,6 +146,8 @@ h1 {
     width: 20%;
 }
 
+
+
 /* seccion quienes somos */
 .quienesSomos {
     margin-top: 80px;
@@ -139,9 +166,36 @@ h1 {
     margin: 0 auto;
 }
 
+
+@media (max-width: 768px) {
+    .queHacemos {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 40px;
+    }
+
+    .queHacemos h2 {
+        text-align: center;
+    }
+
+    .queHacemos div {
+        width: 100%;
+    }
+
+    .container.quienesSomos {
+        padding: 0 5px;
+    }
+
+    .quienesSomos div {
+        gap: 5px;
+    }
+
+
+}
+
 .cardAvatar {
     border: solid 1px black;
-    width: 200px;
+    max-width: 200px;
     height: 250px;
     border-radius: 10px;
     text-align: center;
@@ -153,7 +207,7 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     transition: all 500ms;
-    
+
 }
 
 .cardAvatar:hover,
@@ -163,13 +217,13 @@ h1 {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
 }
 
-.cardAvatar.disable{
+.cardAvatar.disable {
     filter: sepia(80%);
     transform: none;
     box-shadow: none;
 }
 
-.cardAvatar.disable:hover p{
+.cardAvatar.disable:hover p {
     font-size: unset;
     transform: none;
     animation: none;
@@ -179,7 +233,7 @@ h1 {
 }
 
 
-.cardAvatar.disable > p{
+.cardAvatar.disable>p {
     animation: none;
 }
 
@@ -212,6 +266,34 @@ h1 {
     transition: all 500ms;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+@media (max-width: 420px) {
+    .cardAvatar {
+        width: 150px;
+        height: 200px;
+        justify-content: flex-start;
+    }
+
+    .cardAvatar p {
+        font-size: 30px;
+        -webkit-text-stroke: 0.5px black;
+        transform: translateY(-20px);
+        animation: cambio-color 1s infinite;
+    }
+
+    .cardAvatar img {
+        transform: scale(2) translateY(4px);
+    }
+
+    .cardAvatar,
+    .queHacemos {
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+    }
+}
+
 
 
 @keyframes cambio-color {
@@ -412,8 +494,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
-footer > img{
+footer>img {
     width: 200px;
     padding: 40px;
 }
 
+
+
+#qr{
+    width: 100%;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+
+}
